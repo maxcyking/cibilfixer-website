@@ -1,0 +1,82 @@
+rules_version = '2';
+
+// Cloud Storage for Firebase security rules
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Helper function to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper function to check if user is admin
+    function isAdmin() {
+      return request.auth != null && 
+        get(/databases/$(firebaseConfig.projectId)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    // Helper function to check if user owns the file
+    function isOwner(userId) {
+      return request.auth != null && request.auth.uid == userId;
+    }
+
+    // Allow authenticated users to upload files to credit-requests folder
+    match /credit-requests/{customerId}/{allPaths=**} {
+      // Only authenticated users can upload and download credit request documents
+      allow read, write: if request.auth != null;
+    }
+    
+    // KYC Documents - users can upload their own documents, admins can read all
+    match /kyc_documents/{userId}/{stepId}/{fileName} {
+      // Users can upload their own KYC documents
+      allow create, update: if isAuthenticated() && isOwner(userId);
+      
+      // Users can read their own documents
+      allow read: if isAuthenticated() && isOwner(userId);
+      
+      // Admins can read all KYC documents for review
+      allow read: if isAdmin();
+      
+      // Only admins can delete documents (for cleanup)
+      allow delete: if isAdmin();
+    }
+    
+    // Profile Pictures - users can manage their own profile pictures
+    match /profile_pictures/{userId}/{fileName} {
+      // Users can upload/update their own profile pictures
+      allow create, update: if isAuthenticated() && isOwner(userId);
+      
+      // Users can read their own profile pictures
+      allow read: if isAuthenticated() && isOwner(userId);
+      
+      // Admins can read all profile pictures
+      allow read: if isAdmin();
+      
+      // Users can delete their own profile pictures
+      allow delete: if isAuthenticated() && isOwner(userId);
+    }
+    
+    // General Documents - flexible document storage
+    match /documents/{userId}/{category}/{fileName} {
+      // Users can manage their own documents
+      allow create, update, delete: if isAuthenticated() && isOwner(userId);
+      
+      // Users can read their own documents
+      allow read: if isAuthenticated() && isOwner(userId);
+      
+      // Admins can read all documents
+      allow read: if isAdmin();
+    }
+    
+    // Allow listing for admins (for admin panel functionality)
+    match /{allPaths=**} {
+      allow list: if isAdmin();
+    }
+    
+    // Backup/temp storage (if needed)
+    match /temp/{userId}/{fileName} {
+      // Allow authenticated users to upload temporary files
+      allow create, update, delete: if isAuthenticated() && isOwner(userId);
+      allow read: if isAuthenticated() && isOwner(userId);
+    }
+  }
+} 

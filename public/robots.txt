@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Disallow: /500
+
+# Host
+Host: https://cibilfixer.vercel.app
+
+# Sitemaps
+Sitemap: https://cibilfixer.vercel.app/sitemap.xml
