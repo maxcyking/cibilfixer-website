@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth, db } from '@/lib/firebase';
@@ -9,17 +9,36 @@ import { useRouter } from 'next/navigation';
 import { AlertTriangle, Lock, Trash2, Shield, Clock, CheckCircle } from 'lucide-react';
 
 export default function DeleteAccountPage() {
-    const { user, logout } = useAuth();
+    const { user, logout, loading: authLoading } = useAuth();
     const router = useRouter();
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
-    // Redirect if not authenticated
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (mounted && !authLoading && !user) {
+            router.push('/login');
+        }
+    }, [mounted, authLoading, user, router]);
+
+    // Show loading while checking authentication
+    if (!mounted || authLoading) {
+        return (
+            <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            </div>
+        );
+    }
+
+    // Show nothing while redirecting
     if (!user) {
-        router.push('/login');
         return null;
     }
 
@@ -169,12 +188,14 @@ export default function DeleteAccountPage() {
 
                             <div className="flex space-x-4">
                                 <button
+                                    type="button"
                                     onClick={() => setShowConfirmation(false)}
                                     className="flex-1 bg-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 transition-colors"
                                 >
                                     Cancel
                                 </button>
                                 <button
+                                    type="button"
                                     onClick={handleAccountDeletion}
                                     disabled={loading}
                                     className="flex-1 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"

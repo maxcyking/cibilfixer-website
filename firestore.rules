@@ -20,8 +20,19 @@ service cloud.firestore {
       // Users can create their own document during signup
       allow create: if isAuthenticated() && request.auth.uid == userId;
       
-      // Users can update their own document (for profile updates)
-      allow update: if isAuthenticated() && request.auth.uid == userId;
+      // Users can update their own document (for profile updates and deletion marking)
+      allow update: if isAuthenticated() && request.auth.uid == userId &&
+        // Allow normal profile updates or deletion marking
+        (
+          // Normal profile update (no deletion fields)
+          !request.resource.data.keys().hasAny(['markedForDeletion', 'deletionRequestDate', 'status']) ||
+          // Deletion marking update (only allow setting these specific fields)
+          (
+            request.resource.data.keys().hasAll(['markedForDeletion', 'deletionRequestDate']) &&
+            request.resource.data.markedForDeletion == true &&
+            request.resource.data.status == 'deletion_requested'
+          )
+        );
       
       // Only admins can delete user documents
       allow delete: if isAdmin();
@@ -68,6 +79,49 @@ service cloud.firestore {
     match /creditRequests/{requestId} {
       allow read: if isAuthenticated() && 
         resource.data.referralCode == get(/databases/$(database)/documents/users/$(request.auth.uid)).data.myReferralCode;
+    }
+    
+    // Account Deletion Requests Collection Rules
+    match /accountDeletionRequests/{userId} {
+      // Users can only create deletion requests for their own account
+      allow create: if isAuthenticated() && 
+        request.auth.uid == userId &&
+        request.resource.data.userId == request.auth.uid &&
+        request.resource.data.email == request.auth.token.email;
+      
+      // Users can read their own deletion request
+      allow read: if isAuthenticated() && request.auth.uid == userId;
+      
+      // Only admins can read all deletion requests
+      allow read: if isAdmin();
+      
+      // Only admins can update deletion requests (to process them)
+      allow update: if isAdmin();
+      
+      // Only admins can delete deletion requests (after processing)
+      allow delete: if isAdmin();
+      
+      // Prevent users from modifying their deletion request once created
+      allow update: if false;
+    }
+    
+    // Allow admins to list all deletion requests
+    match /accountDeletionRequests/{userId} {
+      allow list: if isAdmin();
+    }
+    
+    // Additional validation for account deletion requests
+    match /accountDeletionRequests/{userId} {
+      allow create: if isAuthenticated() && 
+        request.auth.uid == userId &&
+        // Ensure required fields are present
+        request.resource.data.keys().hasAll(['userId', 'email', 'requestedAt', 'scheduledDeletionDate', 'status']) &&
+        // Ensure status is set to 'pending'
+        request.resource.data.status == 'pending' &&
+        // Ensure the scheduled deletion date is in the future
+        request.resource.data.scheduledDeletionDate > request.time &&
+        // Ensure the user ID matches the document ID
+        request.resource.data.userId == userId;
     }
   }
 } 
