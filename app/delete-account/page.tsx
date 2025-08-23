@@ -1,62 +1,42 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/contexts/AuthContext';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useState } from 'react';
+import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { auth, db } from '@/lib/firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
-import { AlertTriangle, Lock, Trash2, Shield, Clock, CheckCircle } from 'lucide-react';
+import { AlertTriangle, Lock, Trash2, Shield, Clock, CheckCircle, Mail } from 'lucide-react';
 
 export default function DeleteAccountPage() {
-    const { user, logout, loading: authLoading } = useAuth();
     const router = useRouter();
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState(false);
     const [showConfirmation, setShowConfirmation] = useState(false);
-    const [mounted, setMounted] = useState(false);
+    const [verifiedUser, setVerifiedUser] = useState<any>(null);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    useEffect(() => {
-        if (mounted && !authLoading && !user) {
-            router.push('/login');
-        }
-    }, [mounted, authLoading, user, router]);
-
-    // Show loading while checking authentication
-    if (!mounted || authLoading) {
-        return (
-            <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-            </div>
-        );
-    }
-
-    // Show nothing while redirecting
-    if (!user) {
-        return null;
-    }
-
-    const handlePasswordVerification = async (e: React.FormEvent) => {
+    const handleCredentialVerification = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
         setError('');
 
         try {
-            // Verify password by attempting to sign in
-            await signInWithEmailAndPassword(auth, user.email!, password);
+            // Verify credentials by attempting to sign in
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            setVerifiedUser(userCredential.user);
             setShowConfirmation(true);
         } catch (error: any) {
-            console.error('Password verification failed:', error);
+            console.error('Credential verification failed:', error);
             if (error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
-                setError('Incorrect password. Please try again.');
+                setError('Incorrect email or password. Please try again.');
+            } else if (error.code === 'auth/user-not-found') {
+                setError('No account found with this email address.');
+            } else if (error.code === 'auth/invalid-email') {
+                setError('Please enter a valid email address.');
             } else {
-                setError('Failed to verify password. Please try again.');
+                setError('Failed to verify credentials. Please try again.');
             }
         } finally {
             setLoading(false);
@@ -64,18 +44,23 @@ export default function DeleteAccountPage() {
     };
 
     const handleAccountDeletion = async () => {
+        if (!verifiedUser) {
+            setError('User verification failed. Please try again.');
+            return;
+        }
+
         setLoading(true);
         setError('');
 
         try {
             // Get user data first
-            const userDoc = await getDoc(doc(db, 'users', user.uid));
+            const userDoc = await getDoc(doc(db, 'users', verifiedUser.uid));
             const userData = userDoc.data();
 
             // Create deletion request in database
             const deletionRequest = {
-                userId: user.uid,
-                email: user.email,
+                userId: verifiedUser.uid,
+                email: verifiedUser.email,
                 fullName: userData?.fullName || 'Unknown',
                 mobile: userData?.mobile || 'Unknown',
                 requestedAt: new Date().toISOString(),
@@ -86,11 +71,11 @@ export default function DeleteAccountPage() {
             };
 
             // Store deletion request
-            await setDoc(doc(db, 'accountDeletionRequests', user.uid), deletionRequest);
+            await setDoc(doc(db, 'accountDeletionRequests', verifiedUser.uid), deletionRequest);
 
             // Update user status to mark for deletion
             if (userData) {
-                await setDoc(doc(db, 'users', user.uid), {
+                await setDoc(doc(db, 'users', verifiedUser.uid), {
                     ...userData,
                     markedForDeletion: true,
                     deletionRequestDate: new Date().toISOString(),
@@ -101,9 +86,13 @@ export default function DeleteAccountPage() {
             setSuccess(true);
             setShowConfirmation(false);
 
-            // Auto logout after 3 seconds
-            setTimeout(() => {
-                logout();
+            // Sign out the user after successful deletion request
+            setTimeout(async () => {
+                try {
+                    await signOut(auth);
+                } catch (signOutError) {
+                    console.error('Error signing out:', signOutError);
+                }
                 router.push('/');
             }, 3000);
 
@@ -129,7 +118,7 @@ export default function DeleteAccountPage() {
                                 Your account deletion request has been successfully created. Your account will be permanently deleted within 29 days.
                             </p>
                             <p className="text-green-700 text-xs mt-2">
-                                You will be automatically logged out in a few seconds...
+                                Redirecting to homepage in a few seconds...
                             </p>
                         </div>
                     </div>
@@ -151,6 +140,12 @@ export default function DeleteAccountPage() {
                         </div>
 
                         <div className="px-6 py-8">
+                            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+                                <p className="text-blue-800 text-sm">
+                                    <strong>Account:</strong> {verifiedUser?.email}
+                                </p>
+                            </div>
+
                             <div className="bg-red-50 border border-red-200 rounded-lg p-6 mb-6">
                                 <h2 className="text-xl font-semibold text-red-800 mb-4">
                                     ⚠️ This action cannot be undone!
@@ -189,7 +184,12 @@ export default function DeleteAccountPage() {
                             <div className="flex space-x-4">
                                 <button
                                     type="button"
-                                    onClick={() => setShowConfirmation(false)}
+                                    onClick={() => {
+                                        setShowConfirmation(false);
+                                        setVerifiedUser(null);
+                                        setEmail('');
+                                        setPassword('');
+                                    }}
                                     className="flex-1 bg-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-400 transition-colors"
                                 >
                                     Cancel
@@ -254,19 +254,38 @@ export default function DeleteAccountPage() {
                                 <Shield className="h-6 w-6 text-blue-600 mt-0.5 mr-3" />
                                 <div>
                                     <h3 className="text-lg font-semibold text-blue-800 mb-2">
-                                        Security Verification Required
+                                        Account Verification Required
                                     </h3>
                                     <p className="text-blue-700 text-sm">
-                                        To protect your account, please enter your current password to verify your identity before proceeding with account deletion.
+                                        To protect your account, please enter your email and password to verify your identity before proceeding with account deletion.
                                     </p>
                                 </div>
                             </div>
                         </div>
 
-                        <form onSubmit={handlePasswordVerification} className="space-y-6">
+                        <form onSubmit={handleCredentialVerification} className="space-y-6">
+                            <div>
+                                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                                    Email Address *
+                                </label>
+                                <div className="relative">
+                                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                                        placeholder="Enter your email address"
+                                    />
+                                </div>
+                            </div>
+
                             <div>
                                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                                    Current Password *
+                                    Password *
                                 </label>
                                 <div className="relative">
                                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -278,7 +297,7 @@ export default function DeleteAccountPage() {
                                         value={password}
                                         onChange={(e) => setPassword(e.target.value)}
                                         className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                                        placeholder="Enter your current password"
+                                        placeholder="Enter your password"
                                     />
                                 </div>
                             </div>
@@ -299,7 +318,7 @@ export default function DeleteAccountPage() {
                                 </button>
                                 <button
                                     type="submit"
-                                    disabled={loading || !password.trim()}
+                                    disabled={loading || !email.trim() || !password.trim()}
                                     className="flex-1 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                                 >
                                     {loading ? (
@@ -307,7 +326,7 @@ export default function DeleteAccountPage() {
                                     ) : (
                                         <>
                                             <Shield className="h-5 w-5 mr-2" />
-                                            Verify Password
+                                            Verify Account
                                         </>
                                     )}
                                 </button>
