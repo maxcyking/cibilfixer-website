@@ -31,7 +31,7 @@ export default function Page() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white section-padding">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact CIBIL FIXER</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Cibil Fixer</h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
             Get in touch with our credit experts for personalized guidance and free consultation. 
             We're here to help you fix your CIBIL score and achieve your financial goals.
@@ -53,7 +53,7 @@ export default function Page() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Our Office</h3>
                     <p className="text-gray-600">
-                      CIBIL FIXER<br />
+                      Cibil Fixer<br />
                       VIJAY VALLABH CHOURAHA<br />
                       NAGAUR, RAJASTHAN 341001<br />
                       India
@@ -77,7 +77,7 @@ export default function Page() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-1">Email Address</h3>
                     <p className="text-gray-600">
-                      Email: cibilfixer@gmail.com
+                      Email: Cibil Fixer@gmail.com
                     </p>
                   </div>
                 </div>
@@ -106,7 +106,7 @@ export default function Page() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="CIBIL FIXER Office Location"
+                  title="Cibil Fixer Office Location"
                 ></iframe>
               </div>
               

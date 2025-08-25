@@ -1,4 +1,4 @@
-# Privacy Policy for CibilFixer Android App
+# Privacy Policy for Cibil Fixer Android App
 
 **Effective Date:** January 15, 2025
 
@@ -8,7 +8,7 @@
 
 ## About This Policy
 
-This Privacy Policy describes how CibilFixer ("we," "our," or "us") collects, uses, and protects your information when you use our Android mobile application. By using the CibilFixer app, you agree to the collection and use of information in accordance with this policy.
+This Privacy Policy describes how Cibil Fixer ("we," "our," or "us") collects, uses, and protects your information when you use our Android mobile application. By using the Cibil Fixer app, you agree to the collection and use of information in accordance with this policy.
 
 ## Information We Collect
 
@@ -105,11 +105,11 @@ You have the right to:
 - **Restriction:** Limit how we process your information
 
 ### How to Exercise Your Rights
-Contact us at privacy@cibilfixer.com with your request. We will respond within 30 days and verify your identity before processing any requests.
+Contact us at privacy@Cibil Fixer.com with your request. We will respond within 30 days and verify your identity before processing any requests.
 
 ## Children's Privacy
 
-CibilFixer is intended for users 18 years and older. We do not knowingly collect personal information from children under 18. If we discover we have collected information from a child under 18, we will delete it immediately.
+Cibil Fixer is intended for users 18 years and older. We do not knowingly collect personal information from children under 18. If we discover we have collected information from a child under 18, we will delete it immediately.
 
 ## International Data Transfers
 
@@ -139,13 +139,13 @@ We may update this Privacy Policy periodically. When we make changes:
 
 For any privacy-related questions, concerns, or requests, please contact us:
 
-**Email:** privacy@cibilfixer.com  
-**Support Email:** support@cibilfixer.com  
+**Email:** privacy@Cibil Fixer.com  
+**Support Email:** support@Cibil Fixer.com  
 **Phone:** +91-9876543210  
 **WhatsApp:** +91-9876543210  
 
 **Postal Address:**  
-CibilFixer Technologies Pvt. Ltd.  
+Cibil Fixer Technologies Pvt. Ltd.  
 Office No. 304, 3rd Floor  
 Cyber Gateway Building  
 DLF Cyber City, Phase 2  
@@ -159,7 +159,7 @@ India
 As per Indian IT Rules, our Grievance Officer is:
 
 **Name:** Rajesh Kumar Sharma  
-**Email:** grievance@cibilfixer.com  
+**Email:** grievance@Cibil Fixer.com  
 **Phone:** +91-9876543211  
 **Address:** Same as company address above
 
@@ -174,12 +174,12 @@ This Privacy Policy complies with:
 ## Data Protection Officer
 
 **Name:** Priya Mehta  
-**Email:** dpo@cibilfixer.com  
+**Email:** dpo@Cibil Fixer.com  
 **Phone:** +91-9876543212
 
 ---
 
-**Acknowledgment:** By using the CibilFixer Android app, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.
+**Acknowledgment:** By using the Cibil Fixer Android app, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.
 
 **Version:** 2.1  
 **Document ID:** PP-ANDROID-2025-01

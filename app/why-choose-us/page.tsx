@@ -8,7 +8,7 @@ export default function Page() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white section-padding">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Why Choose CibilFixer?</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Cibil Fixer?</h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
             Discover what makes us the most trusted choice for credit improvement services in India. 
             Our proven methods and expert guidance have helped thousands achieve their financial goals.
@@ -66,7 +66,7 @@ export default function Page() {
             {/* Comparison Table */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                See how CibilFixer stacks up against other credit improvement services in the market.
+                See how Cibil Fixer stacks up against other credit improvement services in the market.
               </h2>
               
               <div className="overflow-x-auto">
@@ -74,7 +74,7 @@ export default function Page() {
                   <thead className="bg-gray-50">
                     <tr>
                       <th className="text-left p-4 font-semibold">Features</th>
-                      <th className="text-center p-4 font-semibold">CibilFixer</th>
+                      <th className="text-center p-4 font-semibold">Cibil Fixer</th>
                       <th className="text-center p-4 font-semibold">Competitor A</th>
                       <th className="text-center p-4 font-semibold">Competitor B</th>
                     </tr>
@@ -83,37 +83,37 @@ export default function Page() {
                     {[
                       {
                         feature: 'Success Rate',
-                        cibilfixer: '95%',
+                        Cibil Fixer: '95%',
                         compA: '75%',
                         compB: '68%'
                       },
                       {
                         feature: 'Average Score Improvement',
-                        cibilfixer: '120+ points',
+                        Cibil Fixer: '120+ points',
                         compA: '80 points',
                         compB: '75 points'
                       },
                       {
                         feature: 'Money-Back Guarantee',
-                        cibilfixer: true,
+                        Cibil Fixer: true,
                         compA: false,
                         compB: true
                       },
                       {
                         feature: '24/7 Support',
-                        cibilfixer: true,
+                        Cibil Fixer: true,
                         compA: false,
                         compB: false
                       },
                       {
                         feature: 'Personal Credit Expert',
-                        cibilfixer: true,
+                        Cibil Fixer: true,
                         compA: false,
                         compB: true
                       },
                       {
                         feature: 'Average Processing Time',
-                        cibilfixer: '30-90 days',
+                        Cibil Fixer: '30-90 days',
                         compA: '90-180 days',
                         compB: '60-120 days'
                       }
@@ -121,14 +121,14 @@ export default function Page() {
                       <tr key={index} className="border-t border-gray-200">
                         <td className="p-4 font-medium text-gray-900">{row.feature}</td>
                         <td className="text-center p-4">
-                          {typeof row.cibilfixer === 'boolean' ? (
-                            row.cibilfixer ? (
+                          {typeof row.Cibil Fixer === 'boolean' ? (
+                            row.Cibil Fixer ? (
                               <CheckCircle className="h-6 w-6 text-green-500 mx-auto" />
                             ) : (
                               <X className="h-6 w-6 text-red-500 mx-auto" />
                             )
                           ) : (
-                            <span className="text-primary-600 font-semibold">{row.cibilfixer}</span>
+                            <span className="text-primary-600 font-semibold">{row.Cibil Fixer}</span>
                           )}
                         </td>
                         <td className="text-center p-4">
@@ -182,7 +182,7 @@ export default function Page() {
 
             {/* Call to Action */}
             <div className="text-center bg-primary-50 p-8 rounded-xl">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Experience the CibilFixer Difference?</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Experience the Cibil Fixer Difference?</h2>
               <p className="text-xl text-gray-600 mb-8">
                 Join thousands of satisfied customers who have transformed their financial future with our expert guidance.
               </p>

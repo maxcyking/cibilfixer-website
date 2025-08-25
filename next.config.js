@@ -102,7 +102,7 @@ const nextConfig = {
 
   // Environment variables that should be available on the client
   env: {
-    CUSTOM_KEY: 'cibilfixer-app',
+    CUSTOM_KEY: 'Cibil Fixer-app',
   },
 
   // Headers for security and performance

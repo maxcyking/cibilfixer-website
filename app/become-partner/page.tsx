@@ -343,7 +343,7 @@ export default function Page() {
               {
                 icon: DollarSign,
                 title: "High Commissions",
-                description: "Earn 15-25% commission on every sale with performance bonuses",
+                description: "Earn 10% commission on every sale with performance bonuses",
                 highlight: true
               },
               {

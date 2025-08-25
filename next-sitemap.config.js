@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://cibilfixer.vercel.app',
+  siteUrl: process.env.SITE_URL || 'https://Cibil Fixer.vercel.app',
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: [
@@ -26,7 +26,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://cibilfixer.vercel.app/sitemap.xml',
+      'https://Cibil Fixer.vercel.app/sitemap.xml',
     ],
   },
   transform: async (config, path) => {

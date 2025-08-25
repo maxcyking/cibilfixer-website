@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: 'Privacy Policy - CibilFixer',
-    description: 'Privacy Policy for CibilFixer - Learn how we collect, use, and protect your information.',
+    title: 'Privacy Policy - Cibil Fixer',
+    description: 'Privacy Policy for Cibil Fixer - Learn how we collect, use, and protect your information.',
     robots: 'index, follow',
 }
 
@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
                 <div className="bg-white shadow-lg rounded-lg overflow-hidden">
                     <div className="px-6 py-8 sm:px-10 sm:py-12">
                         <h1 className="text-3xl font-bold text-gray-900 mb-8 border-b-4 border-blue-500 pb-4">
-                            Privacy Policy for CibilFixer
+                            Privacy Policy for Cibil Fixer
                         </h1>
 
                         <div className="bg-gray-100 p-4 rounded-lg mb-8">
@@ -25,14 +25,14 @@ export default function PrivacyPolicyPage() {
 
                         <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-8">
                             <p className="text-yellow-800">
-                                <strong>Important:</strong> This Privacy Policy describes how CibilFixer collects, uses, and protects your information when you use our services. By using CibilFixer, you agree to the collection and use of information in accordance with this policy.
+                                <strong>Important:</strong> This Privacy Policy describes how Cibil Fixer collects, uses, and protects your information when you use our services. By using Cibil Fixer, you agree to the collection and use of information in accordance with this policy.
                             </p>
                         </div>
 
                         <div className="prose prose-lg max-w-none">
                             <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">About This Policy</h2>
                             <p className="text-gray-600 mb-6">
-                                This Privacy Policy describes how CibilFixer ("we," "our," or "us") collects, uses, and protects your information when you use our services. By using CibilFixer, you agree to the collection and use of information in accordance with this policy.
+                                This Privacy Policy describes how Cibil Fixer ("we," "our," or "us") collects, uses, and protects your information when you use our services. By using Cibil Fixer, you agree to the collection and use of information in accordance with this policy.
                             </p>
 
                             <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">Information We Collect</h2>
@@ -149,13 +149,12 @@ export default function PrivacyPolicyPage() {
                             </ul>
 
                             <h3 className="text-xl font-medium text-gray-700 mt-6 mb-3">How to Exercise Your Rights</h3>
-                            <p className="text-gray-600 mb-6">
-                                Contact us at <a href="mailto:cibilfixer@gmail.com" className="text-blue-600 hover:text-blue-800">cibilfixer@gmail.com</a> with your request. We will respond within 30 days and verify your identity before processing any requests.
+                            <p className="text-gray-600 mb-6">                                Contact us at <a href="mailto:Cibil Fixer@gmail.com" className="text-blue-600 hover:text-blue-800">Cibil Fixer@gmail.com</a> with your request. We will respond within 30 days and verify your identity before processing any requests.
                             </p>
 
                             <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">Children's Privacy</h2>
                             <p className="text-gray-600 mb-6">
-                                CibilFixer is intended for users 18 years and older. We do not knowingly collect personal information from children under 18. If we discover we have collected information from a child under 18, we will delete it immediately.
+                                Cibil Fixer is intended for users 18 years and older. We do not knowingly collect personal information from children under 18. If we discover we have collected information from a child under 18, we will delete it immediately.
                             </p>
 
                             <h2 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">International Data Transfers</h2>
@@ -196,7 +195,7 @@ export default function PrivacyPolicyPage() {
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
                                         <p className="text-gray-600 mb-2">
-                                            <strong>Email:</strong> <a href="mailto:cibilfixer@gmail.com" className="text-blue-600 hover:text-blue-800">cibilfixer@gmail.com</a>
+                                            <strong>Email:</strong> <a href="mailto:Cibil Fixer@gmail.com" className="text-blue-600 hover:text-blue-800">Cibil Fixer@gmail.com</a>
                                         </p>
                                         <p className="text-gray-600 mb-2">
                                             <strong>Phone:</strong> <a href="tel:+919414118156" className="text-blue-600 hover:text-blue-800">+91-94141-18156</a>
@@ -209,7 +208,7 @@ export default function PrivacyPolicyPage() {
                                     <div>
                                         <p className="text-gray-600 mb-2"><strong>Postal Address:</strong></p>
                                         <p className="text-gray-600 text-sm">
-                                            CIBIL FIXER<br />
+                                            Cibil Fixer<br />
                                             VIJAY VALLABH CHOURAHA<br />
                                             NAGAUR, RAJASTHAN 341001<br />
                                             India
@@ -233,7 +232,7 @@ export default function PrivacyPolicyPage() {
 
                             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mt-8">
                                 <p className="text-yellow-800">
-                                    <strong>Acknowledgment:</strong> By using CibilFixer, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.
+                                    <strong>Acknowledgment:</strong> By using Cibil Fixer, you acknowledge that you have read, understood, and agree to be bound by this Privacy Policy.
                                 </p>
                             </div>
 
@@ -242,7 +241,7 @@ export default function PrivacyPolicyPage() {
                                     <strong>Document Version:</strong> 2.1 | <strong>Document ID:</strong> PP-WEB-2025-01
                                 </p>
                                 <p className="text-gray-500 text-sm mt-2">
-                                    © 2025 CibilFixer Technologies Pvt. Ltd. All rights reserved.
+                                    © 2025 Cibil Fixer Technologies Pvt. Ltd. All rights reserved.
                                 </p>
                             </div>
                         </div>

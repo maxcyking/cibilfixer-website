@@ -9,7 +9,7 @@ Disallow: /404
 Disallow: /500
 
 # Host
-Host: https://cibilfixer.vercel.app
+Host: https://Cibil Fixer.vercel.app
 
 # Sitemaps
-Sitemap: https://cibilfixer.vercel.app/sitemap.xml
+Sitemap: https://Cibil Fixer.vercel.app/sitemap.xml

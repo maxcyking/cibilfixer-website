@@ -8,7 +8,7 @@ export default function Page() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white section-padding">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About CibilFixer</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Cibil Fixer</h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
             We are dedicated to helping individuals and businesses achieve financial wellness through expert credit improvement services and personalized CIBIL score solutions.
           </p>
@@ -24,7 +24,7 @@ export default function Page() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="prose prose-lg max-w-none">
                 <p className="text-lg text-gray-600 mb-4">
-                  Founded in 2018, CibilFixer emerged from a simple belief: everyone deserves access to financial opportunities, 
+                  Founded in 2017, Cibil Fixer emerged from a simple belief: everyone deserves access to financial opportunities, 
                   regardless of their credit history. Our founders, experienced financial professionals, witnessed firsthand 
                   how credit challenges could derail dreams and limit potential.
                 </p>
@@ -34,7 +34,7 @@ export default function Page() {
                   and regain financial confidence through our proven credit improvement strategies.
                 </p>
                 <p className="text-lg text-gray-600">
-                  Today, CibilFixer stands as a trusted partner in financial wellness, combining cutting-edge technology 
+                  Today, Cibil Fixer stands as a trusted partner in financial wellness, combining cutting-edge technology 
                   with personalized service to deliver measurable results for our clients.
                 </p>
               </div>
@@ -88,7 +88,7 @@ export default function Page() {
 
             {/* Team Section */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose CibilFixer?</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Cibil Fixer?</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h4>
@@ -125,7 +125,7 @@ export default function Page() {
             <div className="text-center">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Transform Your Credit Score?</h2>
               <p className="text-xl text-gray-600 mb-8">
-                Join thousands of satisfied customers who have improved their credit health with CibilFixer.
+                Join thousands of satisfied customers who have improved their credit health with Cibil Fixer.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/raise-request" className="btn-primary">

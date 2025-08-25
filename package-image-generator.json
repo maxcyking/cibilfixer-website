@@ -1,0 +1,17 @@
+{
+  "name": "Cibil Fixer-featured-image-generator",
+  "version": "1.0.0",
+  "description": "Generate Play Store featured image for Cibil Fixer app",
+  "main": "create-featured-image.js",
+  "scripts": {
+    "generate": "node create-featured-image.js",
+    "install-deps": "npm install puppeteer",
+    "preview": "open featured-image-html-mockup.html"
+  },
+  "dependencies": {
+    "puppeteer": "^21.0.0"
+  },
+  "devDependencies": {},
+  "keywords": ["play-store", "featured-image", "Cibil Fixer"],
+  "author": "Cibil Fixer Team"
+}

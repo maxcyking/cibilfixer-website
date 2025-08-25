@@ -340,10 +340,10 @@ export default function DeleteAccountPage() {
                             </p>
                             <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
                                 <a
-                                    href="mailto:cibilfixer@gmail.com"
+                                    href="mailto:Cibil Fixer@gmail.com"
                                     className="text-blue-600 hover:text-blue-800 text-sm font-medium"
                                 >
-                                    Email: cibilfixer@gmail.com
+                                    Email: Cibil Fixer@gmail.com
                                 </a>
                                 <a
                                     href="tel:+919414118156"

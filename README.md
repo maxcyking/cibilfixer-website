@@ -1,6 +1,6 @@
-# CibilFixer - CIBIL Score Improvement Website
+# Cibil Fixer - CIBIL Score Improvement Website
 
-A modern, responsive website for CibilFixer - a professional CIBIL score improvement service. Built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive website for Cibil Fixer - a professional CIBIL score improvement service. Built with Next.js, TypeScript, and Tailwind CSS.
 
 ## 🚀 Features
 
@@ -43,7 +43,7 @@ A modern, responsive website for CibilFixer - a professional CIBIL score improve
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd cibilfixer-website
+cd Cibil Fixer-website
 ```
 
 2. Install dependencies:
@@ -130,9 +130,9 @@ The website is fully optimized for mobile devices with:
 For any inquiries or support:
 
 - **Phone**: +91-94141-18156
-- **Email**: cibilfixer@gmail.com
+- **Email**: Cibil Fixer@gmail.com
 - **Address**: VIJAY VALLABH CHOURAHA, NAGAUR, RAJASTHAN, 341001
-- **Website**: [https://cibilfixer-53840.web.app](https://cibilfixer-53840.web.app)
+- **Website**: [https://Cibil Fixer-53840.web.app](https://Cibil Fixer-53840.web.app)
 
 ## 📄 License
 
@@ -140,4 +140,4 @@ This project is proprietary and confidential. All rights reserved.
 
 ---
 
-**CibilFixer** - Your trusted partner for CIBIL score improvement and financial wellness. 
+**Cibil Fixer** - Your trusted partner for CIBIL score improvement and financial wellness. 

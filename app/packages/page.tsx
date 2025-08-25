@@ -4,76 +4,135 @@ import { CheckCircle, Star, Crown, Zap, X } from 'lucide-react';
 export default function Page() {
   const packages = [
     {
-      name: "Basic Package",
+      name: "Basic",
       icon: CheckCircle,
-      price: "₹15,999",
-      originalPrice: "₹19,999",
-      duration: "3 Months",
+      price: "₹4,900",
+      originalPrice: null,
+      duration: "Most Suited for Quick Correction of Errors",
       description: "Perfect for beginners looking to improve their credit score",
       features: [
-        { name: "Detailed Analysis of Credit Report", included: true },
-        { name: "Identification of Errors", included: true },
-        { name: "Issue Resolution", included: true },
-        { name: "3 Credit Reports", included: true },
-        { name: "Score Improvement Program", included: false },
-        { name: "Access to Senior Credit Expert", included: false }
+        { name: "Credit Report Analysis", included: true },
+        { name: "Correction in Credit Report", included: true },
+        { name: "Loan Closure Update", included: true },
+        { name: "Overdue Rectification", included: true },
+        { name: "Disputed Account Removal", included: true },
+        { name: "Credit Score Improvement", included: false }
       ],
       recommended: false,
-      savings: "Save ₹4,000"
+      savings: null
     },
     {
-      name: "Commercial Package",
+      name: "Score Boost",
       icon: Star,
-      price: "₹24,999",
-      originalPrice: "₹29,999",
-      duration: "3 Months",
-      description: "Most popular choice for comprehensive credit improvement",
+      price: "₹9,900",
+      originalPrice: null,
+      duration: "Most Suited for Improvement in Credit Score",
+      description: "Focused on improving your credit score effectively",
       features: [
-        { name: "Detailed Analysis of Credit Report", included: true },
-        { name: "Identification of Errors", included: true },
-        { name: "Issue Resolution", included: true },
-        { name: "3 Credit Reports", included: true },
-        { name: "Score Improvement Program", included: true },
-        { name: "Access to Senior Credit Expert", included: true }
+        { name: "Credit Report Analysis", included: true },
+        { name: "Correction in Credit Report", included: true },
+        { name: "Loan Closure Update", included: true },
+        { name: "Overdue Rectification", included: true },
+        { name: "Disputed Account Removal", included: true },
+        { name: "Credit Score Improvement", included: true }
+      ],
+      recommended: false,
+      savings: null
+    },
+    {
+      name: "Standard",
+      icon: Crown,
+      price: "₹14,900",
+      originalPrice: null,
+      duration: "Most Suited for Overall Correction & Score Improvement",
+      description: "Comprehensive solution for credit correction and improvement",
+      features: [
+        { name: "Credit Report Analysis", included: true },
+        { name: "Correction in Credit Report", included: true },
+        { name: "Loan Closure Update", included: true },
+        { name: "Overdue Rectification", included: true },
+        { name: "Disputed Account Removal", included: true },
+        { name: "Credit Score Improvement", included: true },
+        { name: "Settlement Flag Removal", included: true },
+        { name: "Suit Filed Flag Removal", included: true },
+        { name: "Write-off/Negative Flag Removal", included: true },
+        { name: "Correction in upto 3 Accounts", included: true },
+        { name: "Dedicated Relationship Manager", included: false }
       ],
       recommended: true,
-      savings: "Save ₹5,000"
+      savings: null
     },
     {
-      name: "Standard Package",
-      icon: Crown,
-      price: "₹29,999",
-      originalPrice: "₹39,999",
-      duration: "6 Months",
-      description: "Enhanced solution with more credit reports and score improvement",
-      features: [
-        { name: "Detailed Analysis of Credit Report", included: true },
-        { name: "Identification of Errors", included: true },
-        { name: "Issue Resolution", included: true },
-        { name: "6 Credit Reports", included: true },
-        { name: "Score Improvement Program", included: true },
-        { name: "Access to Senior Credit Expert", included: false }
-      ],
-      recommended: false,
-      savings: "Save ₹10,000"
-    },
-    {
-      name: "Premium Package",
+      name: "Premium",
       icon: Zap,
-      price: "₹39,999",
-      originalPrice: "₹49,999",
-      duration: "6 Months",
-      description: "Ultimate solution with all features and senior expert access",
+      price: "₹19,900",
+      originalPrice: null,
+      duration: "Premium Package for All Sorts of Issues",
+      description: "Ultimate solution with all features and dedicated support",
       features: [
-        { name: "Detailed Analysis of Credit Report", included: true },
-        { name: "Identification of Errors", included: true },
-        { name: "Issue Resolution", included: true },
-        { name: "3 Credit Reports", included: true },
-        { name: "Score Improvement Program", included: true },
-        { name: "Access to Senior Credit Expert", included: true }
+        { name: "Credit Report Analysis", included: true },
+        { name: "Correction in Credit Report", included: true },
+        { name: "Loan Closure Update", included: true },
+        { name: "Overdue Rectification", included: true },
+        { name: "Disputed Account Removal", included: true },
+        { name: "Credit Score Improvement", included: true },
+        { name: "Settlement Flag Removal", included: true },
+        { name: "Suit Filed Flag Removal", included: true },
+        { name: "Write-off / Negative Flag Removal", included: true },
+        { name: "No Limit on Correction of Account", included: true },
+        { name: "Dedicated Relationship Manager", included: true },
+        { name: "Dedicated Hotline for Quick Resolution", included: true }
       ],
       recommended: false,
-      savings: "Save ₹10,000"
+      savings: null
+    },
+    {
+      name: "Commercial",
+      icon: Star,
+      price: "₹24,900",
+      originalPrice: null,
+      duration: "Most Suited for CMR Rank & Other Issues",
+      description: "Specialized package for commercial credit requirements",
+      features: [
+        { name: "Commercial Report Analysis", included: true },
+        { name: "Correction in Commercial Report", included: true },
+        { name: "CMR Rank Improvement", included: true },
+        { name: "Loan Closure Update", included: true },
+        { name: "Overdue Rectification", included: true },
+        { name: "Disputed Account Removal", included: true },
+        { name: "Settlement Flag Removal", included: true },
+        { name: "Suit Filed Flag Removal", included: true },
+        { name: "Write-off / Negative Flag Removal", included: true },
+        { name: "Correction in upto 2 Accounts", included: true },
+        { name: "Dedicated Relationship Manager", included: false },
+        { name: "Dedicated Hotline for Quick Resolution", included: false }
+      ],
+      recommended: false,
+      savings: null
+    },
+    {
+      name: "Premium Commercial",
+      icon: Crown,
+      price: "₹49,900",
+      originalPrice: null,
+      duration: "Premium Package for All Sorts of Issues",
+      description: "Ultimate commercial solution with unlimited corrections",
+      features: [
+        { name: "Commercial Report Analysis", included: true },
+        { name: "Correction in Commercial Report", included: true },
+        { name: "CMR Rank Improvement", included: true },
+        { name: "Loan Closure Update", included: true },
+        { name: "Overdue Rectification", included: true },
+        { name: "Disputed Account Removal", included: true },
+        { name: "Settlement Flag Removal", included: true },
+        { name: "Suit Filed Flag Removal", included: true },
+        { name: "Write-off / Negative Flag Removal", included: true },
+        { name: "No Limit on Correction of Account", included: true },
+        { name: "Dedicated Relationship Manager", included: true },
+        { name: "Dedicated Hotline for Quick Resolution", included: true }
+      ],
+      recommended: false,
+      savings: null
     }
   ];
 
@@ -82,9 +141,9 @@ export default function Page() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-600 to-primary-700 text-white section-padding">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Choose Your Perfect Plan</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Cibil Fixer Service Packages</h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-            Select from our carefully crafted packages designed to meet different credit improvement needs and budgets.
+            Your Trusted Partner for Credit Repair - Choose from our comprehensive packages designed for individual and commercial credit improvement needs.
           </p>
         </div>
       </section>
@@ -92,12 +151,12 @@ export default function Page() {
       {/* Packages Grid */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {packages.map((pkg, index) => {
               const IconComponent = pkg.icon;
               return (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden ${
-                  pkg.recommended ? 'ring-4 ring-primary-500 relative' : ''
+                  pkg.recommended ? 'ring-4 ring-primary-500 relative transform scale-105' : ''
                 }`}>
                   {pkg.recommended && (
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -118,15 +177,19 @@ export default function Page() {
                       <div className="mb-4">
                         <div className="flex items-center justify-center space-x-2 mb-2">
                           <span className="text-4xl font-bold text-gray-900">{pkg.price}</span>
-                          <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
+                          {pkg.originalPrice && (
+                            <span className="text-lg text-gray-500 line-through">{pkg.originalPrice}</span>
+                          )}
                         </div>
-                        <div className="text-primary-600 font-semibold">{pkg.savings}</div>
-                        <div className="text-gray-600">{pkg.duration}</div>
+                        {pkg.savings && (
+                          <div className="text-primary-600 font-semibold">{pkg.savings}</div>
+                        )}
+                        <div className="text-gray-600 text-sm">{pkg.duration}</div>
                       </div>
                     </div>
 
-                    <div className="bg-red-50 p-4 rounded-lg mb-6">
-                      <h4 className="text-lg font-semibold text-red-800 mb-3">FEATURES</h4>
+                    <div className="bg-green-50 p-4 rounded-lg mb-6">
+                      <h4 className="text-lg font-semibold text-green-800 mb-3">FEATURES</h4>
                       <ul className="space-y-3">
                       {pkg.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start space-x-3">
@@ -205,7 +268,7 @@ export default function Page() {
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                     </svg>
                   </div>
-                  <span className="text-xl font-semibold">+91-94141-18156</span>
+                  <span className="text-xl font-semibold">9414118156</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="bg-green-400 p-2 rounded-full">

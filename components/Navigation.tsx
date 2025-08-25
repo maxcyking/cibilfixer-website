@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Menu, X, CreditCard, User } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 
 const Navigation = () => {
@@ -13,6 +13,7 @@ const Navigation = () => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Packages', href: '/packages' },
+    { name: 'Downloads', href: '/downloads' },
     { name: 'Track Status', href: '/track-status' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -31,10 +32,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="bg-primary-500 rounded-full p-2">
-              <CreditCard className="h-6 w-6 text-white" />
-            </div>
-            <span className="text-xl font-bold text-neutral-900">CibilFixer</span>
+            <img 
+              src="https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f"
+              alt="Cibil Fixer Logo"
+              className="h-10 w-10 rounded-full object-cover"
+            />
+            <span className="text-xl font-bold text-neutral-900">Cibil Fixer</span>
           </Link>
 
           {/* Desktop Navigation */}

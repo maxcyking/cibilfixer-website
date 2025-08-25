@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cibil Fixer - Play Store Featured Image Mockup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .featured-image {
+            width: 1024px;
+            height: 512px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #F0F9FF 100%);
+            position: relative;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            overflow: hidden;
+        }
+        
+        /* Background decorative elements */
+        .bg-circle-1 {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: rgba(59, 130, 246, 0.2);
+            border-radius: 50%;
+            top: 40px;
+            right: 100px;
+            filter: blur(40px);
+        }
+        
+        .bg-circle-2 {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: rgba(16, 185, 129, 0.15);
+            border-radius: 50%;
+            bottom: 60px;
+            left: 80px;
+            filter: blur(30px);
+        }
+        
+        .bg-circle-3 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 50%;
+            top: 50%;
+            right: 200px;
+            filter: blur(35px);
+        }
+        
+        /* Header section */
+        .header {
+            position: absolute;
+            top: 30px;
+            left: 60px;
+            right: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .brand-name {
+            font-size: 42px;
+            font-weight: 900;
+            color: #1F2937;
+            letter-spacing: -1px;
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        
+        .badge {
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border: 1px solid #E5E7EB;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1F2937;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .stars {
+            color: #F59E0B;
+            margin-right: 4px;
+        }
+        
+        /* Main content area */
+        .main-content {
+            position: absolute;
+            top: 120px;
+            left: 60px;
+            right: 60px;
+            bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        /* Left section - Phone mockup */
+        .phone-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .phone-mockup {
+            width: 200px;
+            height: 350px;
+            background: #F9FAFB;
+            border: 2px solid #E5E7EB;
+            border-radius: 24px;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .phone-screen {
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            right: 15px;
+            bottom: 20px;
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .score-meter {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .score-circle {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #10B981 0deg 270deg, #E5E7EB 270deg 360deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .score-inner {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .score-number {
+            font-size: 24px;
+            font-weight: 900;
+            color: #10B981;
+            line-height: 1;
+        }
+        
+        .score-label {
+            font-size: 10px;
+            color: #6B7280;
+            font-weight: 500;
+        }
+        
+        .dashboard-stats {
+            display: flex;
+            gap: 8px;
+            width: 100%;
+        }
+        
+        .stat-item {
+            flex: 1;
+            background: #F3F4F6;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1F2937;
+        }
+        
+        .stat-label {
+            font-size: 8px;
+            color: #6B7280;
+            margin-top: 2px;
+        }
+        
+        /* Right section - Content */
+        .content-section {
+            flex: 1.2;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .tagline {
+            font-size: 24px;
+            font-weight: 600;
+            color: #3B82F6;
+            margin-bottom: 8px;
+        }
+        
+        .transformation {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .score-before {
+            font-size: 32px;
+            font-weight: 900;
+            color: #EF4444;
+        }
+        
+        .arrow {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #F59E0B, #10B981);
+            border-radius: 2px;
+            position: relative;
+        }
+        
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -6px;
+            width: 0;
+            height: 0;
+            border-left: 8px solid #10B981;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+        }
+        
+        .score-after {
+            font-size: 32px;
+            font-weight: 900;
+            color: #10B981;
+        }
+        
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            background: #10B981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .checkmark::after {
+            content: '✓';
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .benefit-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #1F2937;
+        }
+        
+        .cta-section {
+            margin-top: 16px;
+        }
+        
+        .cta-text {
+            font-size: 14px;
+            color: #6B7280;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="featured-image">
+        <!-- Background decorative elements -->
+        <div class="bg-circle-1"></div>
+        <div class="bg-circle-2"></div>
+        <div class="bg-circle-3"></div>
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="logo-section">
+                <div class="logo">C</div>
+                <div class="brand-name">Cibil Fixer</div>
+            </div>
+            <div class="trust-badges">
+                <div class="badge">
+                    <span class="stars">★★★★★</span>4.9 Rating
+                </div>
+                <div class="badge">10,000+ Users</div>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Phone mockup section -->
+            <div class="phone-section">
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="score-meter">
+                            <div class="score-circle">
+                                <div class="score-inner">
+                                    <div class="score-number">750+</div>
+                                    <div class="score-label">EXCELLENT</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">+150</div>
+                                <div class="stat-label">IMPROVED</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">90</div>
+                                <div class="stat-label">DAYS</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">99%</div>
+                                <div class="stat-label">SUCCESS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content section -->
+            <div class="content-section">
+                <div>
+                    <div class="tagline">Transform Your Credit Score</div>
+                    <div class="transformation">
+                        <span class="score-before">580</span>
+                        <div class="arrow"></div>
+                        <span class="score-after">750+</span>
+                    </div>
+                </div>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="checkmark"></div>
+                        <span class="benefit-text">99% Success Rate</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="checkmark"></div>
+                        <span class="benefit-text">150+ Point Average Improvement</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="checkmark"></div>
+                        <span class="benefit-text">Results in 30-90 Days</span>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="checkmark"></div>
+                        <span class="benefit-text">Expert Financial Guidance</span>
+                    </div>
+                </div>
+                
+                <div class="cta-section">
+                    <div class="cta-text">Join thousands who improved their financial future</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

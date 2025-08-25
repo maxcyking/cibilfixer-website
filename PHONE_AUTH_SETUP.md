@@ -11,7 +11,7 @@ This guide will help you set up Firebase Phone Authentication for OTP verificati
 ## Step 1: Enable Phone Authentication in Firebase Console
 
 1. Go to [Firebase Console](https://console.firebase.google.com/)
-2. Select your project: `cibilfixer-53840`
+2. Select your project: `Cibil Fixer-53840`
 3. Navigate to **Authentication** → **Sign-in method**
 4. Find **Phone** in the list of providers
 5. Click on **Phone** to configure it
@@ -23,8 +23,8 @@ This guide will help you set up Firebase Phone Authentication for OTP verificati
 1. In Firebase Console, go to **Authentication** → **Settings** → **Authorized domains**
 2. Add these domains:
    - `localhost` (for development)
-   - `cibilfixer-53840.web.app` (for production)
-   - `cibilfixer-53840.firebaseapp.com` (Firebase hosting domain)
+   - `Cibil Fixer-53840.web.app` (for production)
+   - `Cibil Fixer-53840.firebaseapp.com` (Firebase hosting domain)
    - Your custom domain (if any)
 
 ## Step 3: Configure reCAPTCHA (Important for Phone Auth)
@@ -37,7 +37,7 @@ This guide will help you set up Firebase Phone Authentication for OTP verificati
 1. Go to [Google reCAPTCHA Console](https://www.google.com/recaptcha/admin)
 2. Create a new site (if not already done)
 3. Choose **reCAPTCHA v2** → **"I'm not a robot" Checkbox**
-4. Add your domain: `cibilfixer-53840.web.app`
+4. Add your domain: `Cibil Fixer-53840.web.app`
 5. Copy the **Site Key** (you might need this for advanced configurations)
 
 ## Step 4: Test Phone Authentication
@@ -175,10 +175,10 @@ If you continue to face issues:
 
 ## Current Configuration
 
-- **Project ID**: cibilfixer-53840
-- **Auth Domain**: cibilfixer-53840.firebaseapp.com
-- **Storage Bucket**: cibilfixer-53840.firebasestorage.app
-- **Hosting URL**: https://cibilfixer-53840.web.app
+- **Project ID**: Cibil Fixer-53840
+- **Auth Domain**: Cibil Fixer-53840.firebaseapp.com
+- **Storage Bucket**: Cibil Fixer-53840.firebasestorage.app
+- **Hosting URL**: https://Cibil Fixer-53840.web.app
 
 ---
 
