@@ -17,14 +17,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: [
-      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
-      { url: 'https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f', sizes: '32x32', type: 'image/jpeg' },
-    ],
-    shortcut: '/icon.png',
-    apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
+    icon: 'https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f',
+    shortcut: 'https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f',
+    apple: 'https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f',
   },
   openGraph: {
     title: 'CIBIL FIXER - Credit Score Improvement Services',
