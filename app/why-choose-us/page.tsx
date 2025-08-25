@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle, X, Star } from 'lucide-react';
+import { CheckCircle, X } from 'lucide-react';
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Why Choose Cibil Fixer?</h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-            Discover what makes us the most trusted choice for credit improvement services in India. 
+            Discover what makes us the most trusted choice for credit improvement services in India.
             Our proven methods and expert guidance have helped thousands achieve their financial goals.
           </p>
         </div>
@@ -21,7 +21,7 @@ export default function Page() {
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">What Sets Us Apart</h2>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
                 {
@@ -68,13 +68,13 @@ export default function Page() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
                 See how Cibil Fixer stacks up against other credit improvement services in the market.
               </h2>
-              
+
               <div className="overflow-x-auto">
                 <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
                   <thead className="bg-gray-50">
                     <tr>
                       <th className="text-left p-4 font-semibold">Features</th>
-                      <th className="text-center p-4 font-semibold">Cibil Fixer</th>
+                      <th className="text-center p-4 font-semibold">CibilFixer</th>
                       <th className="text-center p-4 font-semibold">Competitor A</th>
                       <th className="text-center p-4 font-semibold">Competitor B</th>
                     </tr>
@@ -83,37 +83,37 @@ export default function Page() {
                     {[
                       {
                         feature: 'Success Rate',
-                        Cibil Fixer: '95%',
+                        'CibilFixer': '95%',
                         compA: '75%',
                         compB: '68%'
                       },
                       {
                         feature: 'Average Score Improvement',
-                        Cibil Fixer: '120+ points',
+                        'CibilFixer': '120+ points',
                         compA: '80 points',
                         compB: '75 points'
                       },
                       {
                         feature: 'Money-Back Guarantee',
-                        Cibil Fixer: true,
+                        'CibilFixer': true,
                         compA: false,
                         compB: true
                       },
                       {
                         feature: '24/7 Support',
-                        Cibil Fixer: true,
+                        'CibilFixer': true,
                         compA: false,
                         compB: false
                       },
                       {
                         feature: 'Personal Credit Expert',
-                        Cibil Fixer: true,
+                        'CibilFixer': true,
                         compA: false,
                         compB: true
                       },
                       {
                         feature: 'Average Processing Time',
-                        Cibil Fixer: '30-90 days',
+                        'CibilFixer': '30-90 days',
                         compA: '90-180 days',
                         compB: '60-120 days'
                       }
@@ -121,14 +121,14 @@ export default function Page() {
                       <tr key={index} className="border-t border-gray-200">
                         <td className="p-4 font-medium text-gray-900">{row.feature}</td>
                         <td className="text-center p-4">
-                          {typeof row.Cibil Fixer === 'boolean' ? (
-                            row.Cibil Fixer ? (
+                          {typeof row.CibilFixer === 'boolean' ? (
+                            row.CibilFixer ? (
                               <CheckCircle className="h-6 w-6 text-green-500 mx-auto" />
                             ) : (
                               <X className="h-6 w-6 text-red-500 mx-auto" />
                             )
                           ) : (
-                            <span className="text-primary-600 font-semibold">{row.Cibil Fixer}</span>
+                            <span className="text-primary-600 font-semibold">{row.CibilFixer}</span>
                           )}
                         </td>
                         <td className="text-center p-4">
