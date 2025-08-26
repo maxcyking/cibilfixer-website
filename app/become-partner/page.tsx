@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Users, TrendingUp, Award, DollarSign, UserCheck, Target, Rocket, Briefcase, ChevronRight, Eye, EyeOff } from 'lucide-react';
+import { Users, TrendingUp, Award, DollarSign, UserCheck, Target, Rocket, Briefcase, ChevronRight, Eye, EyeOff, IndianRupee } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { motion } from 'framer-motion';
 
@@ -341,7 +341,7 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: DollarSign,
+                icon: IndianRupee,
                 title: "High Commissions",
                 description: "Earn 10% commission on every sale with performance bonuses",
                 highlight: true
