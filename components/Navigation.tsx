@@ -32,12 +32,15 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <img 
-              src="https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f"
-              alt="Cibil Fixer Logo"
+            <img
+              src="/logo.png"
+              alt="CIBIL FIXER Logo"
               className="h-10 w-10 rounded-full object-cover"
             />
-            <span className="text-xl font-bold text-neutral-900">Cibil Fixer</span>
+            <div className="relative font-bold">
+              <span className="text-2xl text-blue-900">CIBIL </span>
+              <span className="text-md text-orange-500 translate-x-full">FIXER</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -114,7 +117,7 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              
+
               {user ? (
                 <div className="flex flex-col space-y-2 pt-2 border-t border-neutral-200">
                   <Link

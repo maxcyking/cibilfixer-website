@@ -66,7 +66,7 @@ Border Gray: #E5E7EB
 
 **Right side (624-1024px):**
 - Trust badge: "4.9★ Rating"
-- "10,000+ Users" badge
+- "1000+ Users" badge
 - Position: 60px from right, 30px from top
 
 ### 2. Main Content Area (80px-432px)

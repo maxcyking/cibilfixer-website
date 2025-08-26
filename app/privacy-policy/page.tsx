@@ -217,7 +217,7 @@ export default function PrivacyPolicyPage() {
                                 </div>
 
                                 <p className="text-gray-600 mt-4">
-                                    <strong>Business Hours:</strong> Monday - Friday: 9:00 AM - 7:00 PM, Saturday: 10:00 AM - 5:00 PM, Sunday: 10:00 AM - 2:00 PM
+                                    <strong>Business Hours:</strong> Monday - Saturday: 9:00 AM - 6:00 PM
                                 </p>
                             </div>
 

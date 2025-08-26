@@ -1,12 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Award, 
-  ChevronRight, 
+import {
+  Shield,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
   Star,
   CheckCircle,
   BarChart3,
@@ -23,21 +23,21 @@ export default function Page() {
       {/* Hero/Banner Section */}
       <section className="bg-gradient-to-br from-primary-100 via-white to-secondary-50 relative overflow-hidden min-h-[90vh] flex items-center">
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 opacity-30" style={{backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23e5e5e5' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)' /%3E%3C/svg%3E")`}}></div>
-        
+        <div className="absolute inset-0 opacity-30" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%23e5e5e5' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grid)' /%3E%3C/svg%3E")` }}></div>
+
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-primary-300 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-secondary-300 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary-200 rounded-full blur-2xl animate-pulse delay-500"></div>
-        
+
         <div className="container-custom relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fadeInUp">
               <div className="inline-flex items-center bg-primary-100 text-primary-800 px-4 py-2 rounded-full text-sm font-medium animate-slideInLeft">
                 <span className="w-2 h-2 bg-primary-500 rounded-full mr-2 animate-pulse"></span>
-                Trusted by 10,000+ customers
+                Trusted by 1000+ customers
               </div>
-              
+
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight">
                 <span className="animate-slideInLeft inline-block">Improve Your</span>{' '}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-primary-500 to-secondary-500 animate-gradient bg-300% animate-slideInLeft inline-block delay-100">
@@ -46,12 +46,12 @@ export default function Page() {
                 <br />
                 <span className="animate-slideInLeft inline-block delay-200">In few steps</span>
               </h1>
-              
+
               <p className="text-xl text-neutral-600 leading-relaxed animate-fadeIn delay-300">
-                Transform your financial future with India's most trusted credit improvement service. 
+                Transform your financial future with India's most trusted credit improvement service.
                 Get personalized strategies, expert guidance, and see real results in just weeks.
               </p>
-              
+
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export default function Page() {
                   View Our Packages
                 </Link>
               </motion.div>
-              
+
               <div className="flex flex-wrap gap-6 pt-4 animate-fadeIn delay-500">
                 <div className="flex items-center space-x-2 hover:scale-105 transition-transform">
                   <div className="bg-green-100 p-1 rounded-full animate-bounce">
@@ -95,74 +95,90 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            
+
             {/* Hero Illustration/Animation */}
-            <div className="lg:flex justify-center items-center hidden">
+            <div className="lg:flex flex-col justify-center items-center hidden">
               <div className="relative w-full max-w-lg animate-float">
-                {/* Credit Score Meter Illustration */}
-                <div className="relative">
-                  <svg viewBox="0 0 400 400" className="w-full h-auto">
-                    {/* Outer Circle */}
-                    <circle
-                      cx="200"
-                      cy="200"
-                      r="150"
-                      fill="none"
-                      stroke="#e5e5e5"
-                      strokeWidth="30"
-                      className="animate-drawCircle"
-                    />
-                    {/* Progress Arc */}
-                    <circle
-                      cx="200"
-                      cy="200"
-                      r="150"
-                      fill="none"
-                      stroke="url(#gradient)"
-                      strokeWidth="30"
-                      strokeDasharray="942"
-                      strokeDashoffset="235"
-                      strokeLinecap="round"
-                      transform="rotate(-90 200 200)"
-                      className="animate-fillProgress"
-                    />
+                {/* Donut Chart */}
+                <div className="relative flex justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="400" height="338" viewBox="0 0 1080 912" fill="none" className="w-full h-auto max-w-md">
                     <defs>
-                      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#ffd814" />
-                        <stop offset="100%" stopColor="#0ea5e9" />
-                      </linearGradient>
+                      <style>
+                        {`
+                          @keyframes segmentAppear {
+                            0% { opacity: 0; transform: scale(0.8) rotate(-10deg); }
+                            100% { opacity: 1; transform: scale(1) rotate(0deg); }
+                          }
+                          .segment-1 { 
+                            animation: segmentAppear 0.6s ease-out 0.2s both;
+                            transform-origin: center;
+                          }
+                          .segment-2 { 
+                            animation: segmentAppear 0.6s ease-out 0.4s both;
+                            transform-origin: center;
+                          }
+                          .segment-3 { 
+                            animation: segmentAppear 0.6s ease-out 0.6s both;
+                            transform-origin: center;
+                          }
+                          .segment-4 { 
+                            animation: segmentAppear 0.6s ease-out 0.8s both;
+                            transform-origin: center;
+                          }
+                          .segment-5 { 
+                            animation: segmentAppear 0.6s ease-out 1.0s both;
+                            transform-origin: center;
+                          }
+                          .segment-6 { 
+                            animation: segmentAppear 0.6s ease-out 1.2s both;
+                            transform-origin: center;
+                          }
+                          .segment-7 { 
+                            animation: segmentAppear 0.6s ease-out 1.4s both;
+                            transform-origin: center;
+                          }
+                        `}
+                      </style>
                     </defs>
-                    
-                    {/* Score Text */}
-                    <text x="200" y="180" textAnchor="middle" className="fill-neutral-900 text-6xl font-bold animate-countUp">
-                      750+
-                    </text>
-                    <text x="200" y="220" textAnchor="middle" className="fill-neutral-600 text-xl">
-                      Excellent Score
-                    </text>
+                    <path className="segment-1" d="M616.049 479.533C617.742 481.281 616.049 600.142 616.049 600.142C616.049 600.142 609.276 633.353 577.108 659.572C544.94 685.792 512.772 701.523 512.772 701.523C512.772 701.523 483.99 687.54 448.436 659.572C412.882 631.605 411.189 601.89 411.189 601.89C411.189 601.89 409.496 483.029 411.189 479.533C412.883 476.037 442.459 473.295 461.981 467.297C482.23 461.077 512.772 448.07 512.772 448.07C512.772 448.07 542.226 461.224 561.871 467.297C582.619 473.712 614.355 477.785 616.049 479.533Z" fill="#FFDE4C" stroke="#FDE800" />
+                    <path className="segment-2" d="M581.861 498.512C619.606 444.798 669.539 389.232 669.539 389.232C669.539 389.232 610.502 434.16 575.963 466.284C540.908 498.887 491.824 554.819 491.824 554.819C491.824 554.819 468.223 535.31 451.327 525.184C436.26 516.154 410.437 505.921 410.437 505.921C410.437 505.921 435.609 532.486 450.934 550.373C472.845 575.949 504.405 617.793 504.405 617.793C504.405 617.793 544.116 552.226 581.861 498.512Z" fill="#003F9E" stroke="black" />
+                    <path className="segment-3" d="M0.00374373 531.82H182.293C182.293 531.82 182.493 463.168 206.368 401.698C232.737 333.809 278.596 289.681 278.596 289.681L149.045 167.48C149.045 167.48 74.5243 234.238 36.6908 343.992C-1.14274 453.747 0.00374373 531.82 0.00374373 531.82Z" fill="#FF0000" />
+                    <path className="segment-4" d="M791.069 280.629L918.327 152.771C918.327 152.771 852.978 86.0128 746.356 41.8847C639.734 -2.24343 549.163 0.019583 549.163 0.019583L545.724 177.663C545.724 177.663 619.098 181.058 677.568 204.819C736.038 228.58 791.069 280.629 791.069 280.629Z" fill="#FFDE4C" />
+                    <path className="segment-5" d="M802.533 293.075L930.938 167.48C930.938 167.48 1002.02 235.369 1041 334.94C1079.98 434.511 1079.98 532.951 1079.98 532.951H895.397C895.397 532.951 891.958 462.799 871.321 402.83C844.953 334.94 802.533 293.075 802.533 293.075Z" fill="#72EF45" />
+                    <path className="segment-6" d="M894.251 546.529L1079.98 549.923C1079.98 549.923 1079.98 642.706 1035.27 744.54C990.554 846.374 918.327 912 918.327 912L787.629 781.879C787.629 781.879 841.513 732.093 866.736 669.861C891.958 617.813 894.251 546.529 894.251 546.529Z" fill="#00A100" />
+                    <path className="segment-7" d="M162.803 153.902L290.061 277.234C290.061 277.234 325.601 237.315 397.829 205.951C460.364 178.795 530.82 177.663 530.82 177.663V0.019583C530.82 0.019583 426.491 0.019583 330.187 41.8847C233.884 83.7498 162.803 153.902 162.803 153.902Z" fill="#FFA41A" />
                   </svg>
-                  
-                  {/* Floating Cards */}
-                  <div className="absolute -top-10 -left-10 bg-white p-4 rounded-xl shadow-lg animate-float delay-500">
-                    <div className="flex items-center space-x-2">
-                      <TrendingUp className="h-5 w-5 text-green-600" />
-                      <span className="text-sm font-semibold">+150 Points</span>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute -bottom-10 -right-10 bg-white p-4 rounded-xl shadow-lg animate-float delay-1000">
-                    <div className="flex items-center space-x-2">
-                      <Award className="h-5 w-5 text-primary-600" />
-                      <span className="text-sm font-semibold">Approved</span>
-                    </div>
-                  </div>
-                  
-                  <div className="absolute top-1/2 -right-20 bg-white p-3 rounded-xl shadow-lg animate-float delay-700">
-                    <div className="flex items-center space-x-2">
-                      <Users className="h-4 w-4 text-secondary-600" />
-                      <span className="text-xs font-semibold">10k+ Users</span>
-                    </div>
-                  </div>
+                </div>
+              </div>
+
+
+
+              {/* Three Colored Taglines */}
+              <div className="flex flex-wrap justify-center gap-2 mt-6 max-w-2xl">
+                <div className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                  1000+ of Happy Clients
+                </div>
+                <div className="bg-yellow-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                  Trusted by Professionals
+                </div>
+                <div className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                  100% Transparency
+                </div>
+              </div>
+
+              {/* Credit Bureau Logos */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8 w-full max-w-2xl">
+                <div className="flex items-center justify-center">
+                  <img src="/cibil.svg" alt="CIBIL" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="flex items-center justify-center">
+                  <img src="/experian.svg" alt="Experian" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="flex items-center justify-center">
+                  <img src="/equifax.svg" alt="Equifax" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="flex items-center justify-center">
+                  <img src="/crif-seeklogo.svg" alt="CRIF High Mark" className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
                 </div>
               </div>
             </div>
@@ -182,8 +198,8 @@ export default function Page() {
               Your Journey to Financial Freedom Starts Here
             </h2>
             <p className="text-xl text-neutral-600 leading-relaxed mb-12">
-              We understand that a poor credit score can limit your financial opportunities. 
-              Our proven methodology and expert guidance have helped thousands of clients 
+              We understand that a poor credit score can limit your financial opportunities.
+              Our proven methodology and expert guidance have helped thousands of clients
               improve their CIBIL scores and achieve their financial goals.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -256,7 +272,7 @@ export default function Page() {
               },
               {
                 icon: Users,
-                title: "10,000+ Clients",
+                title: "1000+ Clients",
                 description: "Successfully served thousands of satisfied customers",
                 color: "primary"
               },
@@ -270,12 +286,10 @@ export default function Page() {
               const IconComponent = feature.icon;
               return (
                 <div key={index} className="card group hover:scale-105 transition-all duration-300">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${
-                    feature.color === 'primary' ? 'bg-primary-100' : 'bg-secondary-100'
-                  }`}>
-                    <IconComponent className={`h-7 w-7 ${
-                      feature.color === 'primary' ? 'text-primary-700' : 'text-secondary-700'
-                    }`} />
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-6 ${feature.color === 'primary' ? 'bg-primary-100' : 'bg-secondary-100'
+                    }`}>
+                    <IconComponent className={`h-7 w-7 ${feature.color === 'primary' ? 'text-primary-700' : 'text-secondary-700'
+                      }`} />
                   </div>
                   <h3 className="text-xl font-semibold text-neutral-900 mb-3">{feature.title}</h3>
                   <p className="text-neutral-600">{feature.description}</p>

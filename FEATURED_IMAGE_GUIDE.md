@@ -39,7 +39,7 @@ Use the specifications in `play-store-featured-image-spec.md` with:
 - **Brand Colors**: Your exact blue (#3B82F6) and green (#10B981)
 - **Phone Mockup**: Shows your dashboard with 750+ score
 - **Transformation**: Clear 580 → 750+ progression
-- **Trust Indicators**: 4.9★ rating, 10,000+ users
+- **Trust Indicators**: 4.9★ rating, 1000+ users
 - **Benefits**: 4 key selling points with checkmarks
 
 ### Typography
@@ -74,7 +74,7 @@ Use the specifications in `play-store-featured-image-spec.md` with:
 .benefit-text { /* Update benefit descriptions */ }
 
 /* Modify trust badges */
-.badge { /* "4.9 Rating", "10,000+ Users" */ }
+.badge { /* "4.9 Rating", "1000+ Users" */ }
 ```
 
 ### Content Variations
@@ -92,7 +92,7 @@ Focus on transformation (580 → 750+)
 Emphasize "99% Success Rate" and "30-Day Results"
 
 ### Version C: User Count
-Highlight "10,000+ Happy Customers" prominently
+Highlight "1000+ Happy Customers" prominently
 
 ### Version D: App Interface
 Show more of your actual app screenshots

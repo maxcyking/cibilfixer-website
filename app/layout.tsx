@@ -17,9 +17,9 @@ export const metadata: Metadata = {
     telephone: false,
   },
   icons: {
-    icon: 'https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f',
-    shortcut: 'https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f',
-    apple: 'https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f',
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
   },
   openGraph: {
     title: 'CIBIL FIXER - Credit Score Improvement Services',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: 'CIBIL FIXER',
     images: [
       {
-        url: 'https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f',
+        url: '/logo.png',
         width: 1200,
         height: 630,
         alt: 'CIBIL FIXER Logo',
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'CIBIL FIXER - Credit Score Improvement Services',
     description: 'Professional CIBIL score improvement services. Fix your credit score with our expert guidance.',
-    images: ['https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/logo%2Fic_launcher.jpg?alt=media&token=2f6352b5-d996-4e13-8b4f-c92790a1234f'],
+    images: ['/logo.png'],
   },
 }
 

@@ -3,52 +3,76 @@ import { Star, Play, Quote } from 'lucide-react';
 export default function Page() {
   const textTestimonials = [
     {
-      name: "Rajesh Kumar",
+      name: "Rajesh Choudhary",
       role: "Business Owner",
-      location: "Mumbai",
-      content: "My CIBIL score improved from 580 to 750 in just 3 months! The team was incredibly professional and kept me updated throughout the process. Now I've got my business loan approved at the best rates. Highly recommend CibilCare!",
+      location: "Jaipur",
+      content: "My CIBIL score improved from 580 to 750 in just 3 months! The team was incredibly professional and kept me updated throughout the process. Now I've got my business loan approved at the best rates. Highly recommend CIBIL FIXER!",
       rating: 5,
       scoreImprovement: "+170 points"
     },
     {
-      name: "Priya Sharma",
-      role: "Software Engineer",
-      location: "Bangalore",
-      content: "I was skeptical at first, but CibilCare delivered exactly what they promised. Their expert guidance helped me understand my credit report better, and the results speak for themselves. Professional service with excellent customer support.",
+      name: "Mohit Soni",
+      role: "Entrepreneur",
+      location: "Nagaur",
+      content: "I was skeptical at first, but CIBIL FIXER delivered exactly what they promised. Their expert guidance helped me understand my credit report better, and the results speak for themselves. Professional service with excellent customer support.",
       rating: 5,
       scoreImprovement: "+140 points"
     },
     {
-      name: "Amit Patel",
-      role: "Entrepreneur",
-      location: "Delhi",
-      content: "Outstanding service! The team went above and beyond to help improve my credit situation. The monthly progress reports were detailed and easy to understand. Thanks to CibilCare, I was able to get my home loan approved.",
+      name: "Avni Sharma",
+      role: "Software Engineer",
+      location: "Mumbai",
+      content: "Outstanding service! The team went above and beyond to help improve my credit situation. The monthly progress reports were detailed and easy to understand. Thanks to CIBIL FIXER, I was able to get my home loan approved.",
       rating: 5,
       scoreImprovement: "+160 points"
     },
     {
-      name: "Sunita Verma",
-      role: "Doctor",
-      location: "Pune",
-      content: "The express package was perfect for my urgent needs. Within 45 days, my score improved significantly, allowing me to secure a loan for my clinic expansion. The 24/7 support was incredibly helpful throughout the process.",
+      name: "Manohar Singh",
+      role: "Business Owner",
+      location: "Bikaner",
+      content: "The express package was perfect for my urgent needs. Within 45 days, my score improved significantly, allowing me to secure a loan for my business expansion. The 24/7 support was incredibly helpful throughout the process.",
       rating: 5,
       scoreImprovement: "+120 points"
     },
     {
-      name: "Rohit Singh",
-      role: "Marketing Manager",
-      location: "Chennai",
-      content: "I had multiple credit issues that seemed impossible to resolve. CibilCare's expert team not only fixed these issues but also educated me on maintaining good credit health. The investment was worth every penny!",
+      name: "Chuka Devi",
+      role: "Small-scale Business Owner",
+      location: "Degana, Rajasthan",
+      content: "I had multiple credit issues that seemed impossible to resolve. CIBIL FIXER's expert team not only fixed these issues but also educated me on maintaining good credit health. The investment was worth every penny!",
       rating: 5,
       scoreImprovement: "+190 points"
     },
     {
-      name: "Kavita Mehta",
+      name: "Dr. Sunita Verma",
+      role: "Doctor",
+      location: "Jaipur",
+      content: "The professional service exceeded my expectations. Within 3 months, my CIBIL score improved dramatically, enabling me to get the medical equipment loan I needed for my clinic. Highly recommend CIBIL FIXER!",
+      rating: 5,
+      scoreImprovement: "+150 points"
+    },
+    {
+      name: "Prahlad Singh Chandrawat",
       role: "Teacher",
-      location: "Ahmedabad",
+      location: "Nagaur",
       content: "The basic package was perfect for someone like me who was new to credit management. The educational resources provided were invaluable, and the results exceeded my expectations. Very satisfied with the service!",
       rating: 5,
       scoreImprovement: "+110 points"
+    },
+    {
+      name: "Mohd. Iqbal",
+      role: "Shop Owner",
+      location: "Lucknow",
+      content: "CIBIL FIXER helped me understand my credit report and fixed all the errors that were affecting my score. Now I can easily get business loans for my shop expansion. Professional and reliable service!",
+      rating: 5,
+      scoreImprovement: "+135 points"
+    },
+    {
+      name: "Er. Nikhil Sharma",
+      role: "Software Engineer",
+      location: "Bangalore",
+      content: "Being in the tech industry, I appreciate their systematic approach and regular updates. My credit score improved from 620 to 780 in just 4 months. The team was always available to answer my questions.",
+      rating: 5,
+      scoreImprovement: "+160 points"
     }
   ];
 
@@ -57,7 +81,7 @@ export default function Page() {
       name: "Manish Gupta",
       role: "IT Professional",
       image: "/api/placeholder/80/80",
-      content: "CibilCare transformed my financial life. From 520 to 720 in 90 days!",
+      content: "CIBIL FIXER transformed my financial life. From 520 to 720 in 90 days!",
       rating: 5
     },
     {
@@ -82,7 +106,7 @@ export default function Page() {
       role: "Business Owner",
       thumbnail: "/api/placeholder/300/200",
       duration: "2:45",
-      title: "How CibilCare helped me get a ₹50 lakh business loan"
+      title: "How CIBIL FIXER helped me get a ₹50 lakh business loan"
     },
     {
       name: "Meera Krishnan",
@@ -96,7 +120,7 @@ export default function Page() {
       role: "Entrepreneur",
       thumbnail: "/api/placeholder/300/200",
       duration: "2:30",
-      title: "Why I chose CibilCare for credit improvement"
+      title: "Why I chose CIBIL FIXER for credit improvement"
     }
   ];
 
@@ -107,7 +131,7 @@ export default function Page() {
         <div className="container-custom text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Client Success Stories</h1>
           <p className="text-xl text-primary-100 max-w-3xl mx-auto">
-            Real people, real results. Hear from our satisfied clients who have transformed 
+            Real people, real results. Hear from our satisfied clients who have transformed
             their financial lives with our expert credit improvement services.
           </p>
         </div>
@@ -118,7 +142,7 @@ export default function Page() {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">10,000+</div>
+              <div className="text-4xl font-bold text-primary-600 mb-2">1000+</div>
               <div className="text-gray-600">Happy Clients</div>
             </div>
             <div>
@@ -146,7 +170,7 @@ export default function Page() {
               Read detailed success stories from clients who have achieved remarkable credit improvements.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {textTestimonials.map((testimonial, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
@@ -158,9 +182,9 @@ export default function Page() {
                     ))}
                   </div>
                 </div>
-                
+
                 <p className="text-gray-700 mb-4 italic">"{testimonial.content}"</p>
-                
+
                 <div className="border-t pt-4">
                   <div className="flex justify-between items-start mb-2">
                     <div>
@@ -190,7 +214,7 @@ export default function Page() {
               Meet some of our satisfied clients who are happy to share their success stories.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {photoTestimonials.map((testimonial, index) => (
               <div key={index} className="text-center bg-gray-50 p-6 rounded-xl">
@@ -220,7 +244,7 @@ export default function Page() {
               Watch our clients share their personal experiences and transformation journeys.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {videoTestimonials.map((video, index) => (
               <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
