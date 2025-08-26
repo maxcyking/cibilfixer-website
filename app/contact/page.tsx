@@ -105,7 +105,7 @@ export default function Page() {
               {/* Google Maps Integration */}
               <div className="bg-gray-200 h-64 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14454.123456789!2d74.755625!3d27.1975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDExJzUxLjAiTiA3NMKwNDUnMjAuMyJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d257448.5569410761!2d73.68955056760244!3d27.289896520936974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDExJzUzLjIiTiA3M8KwNDQnNTYuNCJF!5e0!3m2!1sen!2sin!4v1756183508319!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

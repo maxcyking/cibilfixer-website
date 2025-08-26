@@ -318,22 +318,22 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: "Rajesh Kumar",
-                role: "Business Owner",
+                name: "Manohar Singh",
+                role: "Business Owner, Bikaner",
                 content: "My CIBIL score improved from 580 to 750 in just 3 months. Now I got my business loan approved!",
                 rating: 5,
                 improvement: "+170"
               },
               {
-                name: "Priya Sharma",
-                role: "Software Engineer",
-                content: "Professional service with excellent results. They helped me get my home loan at the best rates.",
+                name: "Chuka Devi",
+                role: "Small-scale business, Degana, Rajasthan",
+                content: "Professional service with excellent results. They helped me get my business loan at the best rates.",
                 rating: 5,
                 improvement: "+140"
               },
               {
-                name: "Amit Patel",
-                role: "Entrepreneur",
+                name: "Dr. Sunita Verma",
+                role: "Doctor, Jaipur",
                 content: "Outstanding support throughout the process. Highly recommend their services to everyone.",
                 rating: 5,
                 improvement: "+160"

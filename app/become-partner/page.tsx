@@ -413,20 +413,20 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Ravi Kumar",
-                location: "Mumbai",
+                name: "Rajesh Choudhary",
+                location: "Jaipur",
                 achievement: "₹45,000/month",
-                story: "Started as a part-time partner and now leads our Mumbai sales team. The training and support helped me exceed all my goals."
+                story: "Started as a part-time partner and now leads our Jaipur sales team. The training and support helped me exceed all my goals."
               },
               {
-                name: "Sneha Patel",
-                location: "Ahmedabad",
+                name: "Mohit Soni",
+                location: "Nagaur",
                 achievement: "Top Performer 2023",
                 story: "The flexible schedule allowed me to balance family commitments while building a successful sales career in credit improvement."
               },
               {
-                name: "Arjun Singh",
-                location: "Delhi",
+                name: "Avni Sharma",
+                location: "Mumbai",
                 achievement: "₹2.5L+ Annual Bonus",
                 story: "The comprehensive training program gave me the confidence to excel. The commission structure is truly rewarding for hard work."
               }
