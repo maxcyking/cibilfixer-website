@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Phone, Mail, MapPin } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -8,16 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="col-span-1">
-            <Link href="/" className="flex items-center space-x-3 mb-6">
-              <img
-                src="/logo.png"
-                alt="CIBIL FIXER Logo"
-                className="h-10 w-10 rounded-full object-cover"
-              />
-              <div className="relative font-bold">
-                <span className="text-2xl text-blue-900">CIBIL </span>
-                <span className="text-md text-orange-500 translate-x-full">FIXER</span>
-              </div>
+            <Link href="/" className="mb-6 inline-block">
+              <Logo />
             </Link>
             <p className="text-neutral-400 mb-6">
               Your trusted partner for CIBIL score improvement and financial wellness.

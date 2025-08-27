@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import StepOne from '@/components/raise-request/StepOne';
 import StepTwo from '@/components/raise-request/StepTwo';
@@ -10,6 +11,8 @@ import { FileText, MapPin, CheckCircle } from 'lucide-react';
 export interface FormData {
   // Step 1
   issue: string;
+  selectedPackage: string;
+  packagePrice: string;
   fullName: string;
   fatherName: string;
   dob: string;
@@ -39,10 +42,13 @@ export interface FormData {
 }
 
 export default function RaiseRequest() {
+  const searchParams = useSearchParams();
   const [currentStep, setCurrentStep] = useState(1);
   const [customerId, setCustomerId] = useState('');
   const [formData, setFormData] = useState<FormData>({
     issue: '',
+    selectedPackage: '',
+    packagePrice: '',
     fullName: '',
     fatherName: '',
     dob: '',
@@ -61,6 +67,20 @@ export default function RaiseRequest() {
     referralCode: '',
     remark: ''
   });
+
+  useEffect(() => {
+    const packageName = searchParams.get('package');
+    const packagePrice = searchParams.get('price');
+    
+    if (packageName && packagePrice) {
+      setFormData(prev => ({
+        ...prev,
+        selectedPackage: packageName,
+        packagePrice: packagePrice,
+        issue: 'PACKAGE_SELECTION' // Set a default issue type for package selections
+      }));
+    }
+  }, [searchParams]);
 
   const steps = [
     { number: 1, title: 'Personal Details', icon: FileText },

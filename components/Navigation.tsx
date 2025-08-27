@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X, User } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
+import Logo from './Logo';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,16 +32,8 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <img
-              src="/logo.png"
-              alt="CIBIL FIXER Logo"
-              className="h-10 w-10 rounded-full object-cover"
-            />
-            <div className="relative font-bold">
-              <span className="text-2xl text-blue-900">CIBIL </span>
-              <span className="text-md text-orange-500 translate-x-full">FIXER</span>
-            </div>
+          <Link href="/">
+            <Logo />
           </Link>
 
           {/* Desktop Navigation */}
@@ -68,6 +61,7 @@ const Navigation = () => {
                   <span>Dashboard</span>
                 </Link>
                 <button
+                  type="button"
                   onClick={handleLogout}
                   className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
                 >
@@ -95,6 +89,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
+              type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-neutral-600 hover:text-neutral-900 focus:outline-none"
             >
@@ -129,6 +124,7 @@ const Navigation = () => {
                     <span>Dashboard</span>
                   </Link>
                   <button
+                    type="button"
                     onClick={() => {
                       handleLogout();
                       setIsMenuOpen(false);

@@ -16,10 +16,12 @@ export default function StepOne({ formData, setFormData, onNext }: StepOneProps)
   const [showOTPModal, setShowOTPModal] = useState(false);
 
   const issueTypes = [
-    'LOW SCORE',
-    'WRITE OFF',
-    'SETTLEMENT',
-    'OTHER ISSUE'
+    'Low Credit Score',
+    'Written-Off Loan Showing in Report',
+    'Settlement Flag in Report',
+    'Incorrect Personal / Loan Details',
+    'Other CIC Related Issues',
+    'PACKAGE_SELECTION'
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -87,6 +89,20 @@ export default function StepOne({ formData, setFormData, onNext }: StepOneProps)
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Step 1: Personal Details</h2>
 
         <div className="space-y-6">
+          {/* Selected Package Display */}
+          {formData.selectedPackage && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">Selected Package</h3>
+              <div className="flex justify-between items-center">
+                <span className="text-blue-800 font-medium">{formData.selectedPackage}</span>
+                <span className="text-blue-900 font-bold text-lg">{formData.packagePrice}</span>
+              </div>
+              <p className="text-sm text-blue-700 mt-1">
+                You have pre-selected this package. You can change your issue type below if needed.
+              </p>
+            </div>
+          )}
+
           {/* Issue Type */}
           <div>
             <label htmlFor="issue" className="block text-sm font-medium text-gray-700 mb-2">
@@ -102,7 +118,9 @@ export default function StepOne({ formData, setFormData, onNext }: StepOneProps)
             >
               <option value="">Select Issue Type</option>
               {issueTypes.map((type) => (
-                <option key={type} value={type}>{type}</option>
+                <option key={type} value={type}>
+                  {type === 'PACKAGE_SELECTION' ? 'Package Selection' : type}
+                </option>
               ))}
             </select>
             {errors.issue && (

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Users, TrendingUp, Award, DollarSign, UserCheck, Target, Rocket, Briefcase, ChevronRight, Eye, EyeOff, IndianRupee } from 'lucide-react';
+import { Users, TrendingUp, Award, UserCheck, Target, Rocket, Briefcase, ChevronRight, Eye, EyeOff, IndianRupee } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { motion } from 'framer-motion';
 
@@ -107,7 +107,7 @@ export default function Page() {
                 <div className="bg-white p-4 rounded-2xl shadow-soft hover:shadow-medium transition-all">
                   <div className="flex items-center space-x-3">
                     <div className="bg-primary-100 p-3 rounded-xl">
-                      <DollarSign className="h-6 w-6 text-primary-700" />
+                      <IndianRupee className="h-6 w-6 text-primary-700" />
                     </div>
                     <div>
                       <p className="text-2xl font-bold text-neutral-900">₹50k+</p>
