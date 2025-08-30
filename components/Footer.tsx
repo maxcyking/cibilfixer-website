@@ -10,7 +10,9 @@ const Footer = () => {
           {/* Company Info */}
           <div className="col-span-1">
             <Link href="/" className="mb-6 inline-block">
-              <Logo />
+              <div className="bg-white p-3 rounded-lg shadow-sm inline-block">
+                <Logo />
+              </div>
             </Link>
             <p className="text-neutral-400 mb-6">
               Your trusted partner for CIBIL score improvement and financial wellness.
