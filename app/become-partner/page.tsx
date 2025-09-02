@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Users, TrendingUp, Award, UserCheck, Target, Rocket, Briefcase, ChevronRight, Eye, EyeOff, IndianRupee } from 'lucide-react';
+import { Users, TrendingUp, Award, UserCheck, Target, Rocket, Briefcase, ChevronRight, Eye, EyeOff, IndianRupee, Download } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
 import { motion } from 'framer-motion';
+import DownloadButton from '@/components/DownloadButton';
 
 export default function Page() {
   const router = useRouter();
@@ -464,6 +465,12 @@ export default function Page() {
             <a href="#" className="bg-white hover:bg-neutral-100 text-neutral-900 font-semibold py-4 px-10 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl">
               Register Now
             </a>
+            <DownloadButton 
+              type="partner"
+              className="bg-transparent hover:bg-white/20 text-white font-semibold py-4 px-10 rounded-full transition-all duration-200 border-2 border-white"
+            >
+              Download Partner App
+            </DownloadButton>
             <Link href="/contact" className="bg-transparent hover:bg-white/20 text-white font-semibold py-4 px-10 rounded-full transition-all duration-200 border-2 border-white">
               Contact Sales Team
             </Link>

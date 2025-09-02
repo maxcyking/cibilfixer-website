@@ -48,7 +48,7 @@ export default function Page() {
       location: "Jaipur",
       content: "The professional service exceeded my expectations. Within 3 months, my CIBIL score improved dramatically, enabling me to get the medical equipment loan I needed for my clinic. Highly recommend CIBIL FIXER!",
       rating: 5,
-      scoreImprovement: "+150 points"
+      scoreImprovement: "+100 points"
     },
     {
       name: "Prahlad Singh Chandrawat",
@@ -150,7 +150,7 @@ export default function Page() {
               <div className="text-gray-600">Success Rate</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-primary-600 mb-2">150+</div>
+              <div className="text-4xl font-bold text-primary-600 mb-2">100+</div>
               <div className="text-gray-600">Avg Score Improvement</div>
             </div>
             <div>

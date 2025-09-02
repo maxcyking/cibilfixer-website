@@ -277,7 +277,7 @@ export default function Page() {
                   <TrendingUp className="h-10 w-10 text-green-700" />
                 </div>
                 <h3 className="text-xl font-semibold text-neutral-900 mb-3">Proven Results</h3>
-                <p className="text-neutral-600">Average score improvement of 150+ points within 90 days</p>
+                <p className="text-neutral-600">Average score improvement of 100+ points within 90 days</p>
               </div>
             </div>
           </div>
