@@ -69,16 +69,18 @@ export default function RaiseRequest() {
   });
 
   useEffect(() => {
-    const packageName = searchParams.get('package');
-    const packagePrice = searchParams.get('price');
-    
-    if (packageName && packagePrice) {
-      setFormData(prev => ({
-        ...prev,
-        selectedPackage: packageName,
-        packagePrice: packagePrice,
-        issue: 'PACKAGE_SELECTION' // Set a default issue type for package selections
-      }));
+    if (searchParams) {
+      const packageName = searchParams.get('package');
+      const packagePrice = searchParams.get('price');
+
+      if (packageName && packagePrice) {
+        setFormData(prev => ({
+          ...prev,
+          selectedPackage: packageName,
+          packagePrice: packagePrice,
+          issue: 'PACKAGE_SELECTION' // Set a default issue type for package selections
+        }));
+      }
     }
   }, [searchParams]);
 
@@ -125,32 +127,29 @@ export default function RaiseRequest() {
               const Icon = step.icon;
               const isActive = currentStep >= step.number;
               const isCompleted = currentStep > step.number;
-              
+
               return (
                 <div key={step.number} className="relative flex-1">
                   {index !== steps.length - 1 && (
                     <div
-                      className={`absolute top-6 left-16 right-0 h-1 ${
-                        isCompleted ? 'bg-green-500' : 'bg-gray-300'
-                      }`}
+                      className={`absolute top-6 left-16 right-0 h-1 ${isCompleted ? 'bg-green-500' : 'bg-gray-300'
+                        }`}
                     />
                   )}
                   <div className="relative flex flex-col items-center">
                     <div
-                      className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
-                        isActive
+                      className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isActive
                           ? isCompleted
                             ? 'bg-green-500 border-green-500 text-white'
                             : 'bg-blue-500 border-blue-500 text-white'
                           : 'bg-white border-gray-300 text-gray-400'
-                      }`}
+                        }`}
                     >
                       <Icon className="w-6 h-6" />
                     </div>
                     <span
-                      className={`mt-2 text-sm font-medium ${
-                        isActive ? 'text-gray-900' : 'text-gray-400'
-                      }`}
+                      className={`mt-2 text-sm font-medium ${isActive ? 'text-gray-900' : 'text-gray-400'
+                        }`}
                     >
                       {step.title}
                     </span>
