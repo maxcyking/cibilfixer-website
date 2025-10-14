@@ -160,6 +160,8 @@ export default function StepTwo({ formData, setFormData, onComplete, onPrev }: S
       const requestData = {
         customerId,
         issue: formData.issue,
+        selectedPackage: formData.selectedPackage,
+        packagePrice: formData.packagePrice,
         fullName: formData.fullName,
         fatherName: formData.fatherName,
         dob: formData.dob,
@@ -177,6 +179,10 @@ export default function StepTwo({ formData, setFormData, onComplete, onPrev }: S
         referralCode: formData.referralCode,
         remark: formData.remark,
         documents: uploadedDocuments, // Store download URLs instead of file names
+        // Platform and tracking information
+        platform: formData.platformMetadata?.platform || 'website',
+        platformMetadata: formData.platformMetadata || null,
+        submissionSource: 'website',
         status: 'Reviewing',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()

@@ -7,6 +7,10 @@ import StepOne from '@/components/raise-request/StepOne';
 import StepTwo from '@/components/raise-request/StepTwo';
 import SuccessPage from '@/components/raise-request/SuccessPage';
 import { FileText, MapPin, CheckCircle } from 'lucide-react';
+import { collectPlatformMetadata } from '@/lib/platform-utils';
+import { FormTracker } from '@/lib/form-analytics';
+
+import { PlatformMetadata } from '@/lib/platform-utils';
 
 export interface FormData {
   // Step 1
@@ -39,12 +43,15 @@ export interface FormData {
   };
   referralCode: string;
   remark: string;
+  // Platform Metadata
+  platformMetadata?: PlatformMetadata;
 }
 
 export default function RaiseRequest() {
   const searchParams = useSearchParams();
   const [currentStep, setCurrentStep] = useState(1);
   const [customerId, setCustomerId] = useState('');
+  const [formTracker, setFormTracker] = useState<FormTracker | null>(null);
   const [formData, setFormData] = useState<FormData>({
     issue: '',
     selectedPackage: '',
@@ -65,10 +72,32 @@ export default function RaiseRequest() {
     pin: '',
     documents: {},
     referralCode: '',
-    remark: ''
+    remark: '',
+    platformMetadata: undefined
   });
 
   useEffect(() => {
+    // Collect platform metadata when component mounts
+    const initializePlatformData = async () => {
+      try {
+        const metadata = await collectPlatformMetadata();
+        setFormData(prev => ({
+          ...prev,
+          platformMetadata: metadata
+        }));
+
+        // Initialize form tracker
+        const tracker = new FormTracker('raise-request', metadata);
+        setFormTracker(tracker);
+        tracker.trackFormStart(1);
+      } catch (error) {
+        console.warn('Failed to collect platform metadata:', error);
+      }
+    };
+
+    initializePlatformData();
+
+    // Handle package selection from URL parameters
     if (searchParams) {
       const packageName = searchParams.get('package');
       const packagePrice = searchParams.get('price');
@@ -91,14 +120,19 @@ export default function RaiseRequest() {
   ];
 
   const handleNext = () => {
-    setCurrentStep(prev => prev + 1);
+    const newStep = currentStep + 1;
+    formTracker?.trackStepNext(currentStep, newStep);
+    setCurrentStep(newStep);
   };
 
   const handlePrev = () => {
-    setCurrentStep(prev => prev - 1);
+    const newStep = currentStep - 1;
+    formTracker?.trackStepPrev(currentStep, newStep);
+    setCurrentStep(newStep);
   };
 
   const handleComplete = (custId: string) => {
+    formTracker?.trackFormSubmit(2, formData);
     setCustomerId(custId);
     setCurrentStep(3);
   };
@@ -139,10 +173,10 @@ export default function RaiseRequest() {
                   <div className="relative flex flex-col items-center">
                     <div
                       className={`w-12 h-12 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isActive
-                          ? isCompleted
-                            ? 'bg-green-500 border-green-500 text-white'
-                            : 'bg-blue-500 border-blue-500 text-white'
-                          : 'bg-white border-gray-300 text-gray-400'
+                        ? isCompleted
+                          ? 'bg-green-500 border-green-500 text-white'
+                          : 'bg-blue-500 border-blue-500 text-white'
+                        : 'bg-white border-gray-300 text-gray-400'
                         }`}
                     >
                       <Icon className="w-6 h-6" />
@@ -159,6 +193,8 @@ export default function RaiseRequest() {
             })}
           </div>
         </div>
+
+
 
         {/* Form Content */}
         <div className="max-w-4xl mx-auto">
