@@ -34,9 +34,9 @@ export default function Page() {
                       <span className="px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800">
                         Available
                       </span>
-                      <span className="text-primary-600 font-semibold">1.0.1</span>
+                      <span className="text-primary-600 font-semibold">1.1.0</span>
                     </div>
-                    <div className="text-gray-600 text-sm">Size: 25 MB</div>
+                    <div className="text-gray-600 text-sm">Size: 58 MB</div>
                   </div>
                 </div>
 
@@ -44,13 +44,13 @@ export default function Page() {
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">App Details</h4>
                   <ul className="space-y-2 text-sm text-gray-600">
                     <li><strong>Requirements:</strong> Android 6.0 or higher</li>
-                    <li><strong>Last Updated:</strong> 02.09.2025</li>
-                    <li><strong>Version:</strong> 1.0.1</li>
+                    <li><strong>Last Updated:</strong> 10.10.2025</li>
+                    <li><strong>Version:</strong> 1.1.0</li>
                   </ul>
                 </div>
 
                 <a
-                  href="https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/apks%2Fapp-release.apk?alt=media&token=0840a962-ba83-4371-8901-924a637d5449"
+                  href="https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/apks%2Fapp-release.apk?alt=media&token=0b51580c-b6a0-4749-a71c-e31701cd213f"
                   download
                   className="w-full flex items-center justify-center space-x-2 bg-primary-600 hover:bg-primary-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200"
                 >

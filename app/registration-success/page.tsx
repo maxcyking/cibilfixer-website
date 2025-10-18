@@ -113,7 +113,7 @@ export default function RegistrationSuccess() {
             <div className="grid md:grid-cols-2 gap-6">
               {/* Android Download */}
               <a
-                href="/download/android-app.apk"
+                href="https://firebasestorage.googleapis.com/v0/b/future-capital-91977.firebasestorage.app/o/apks%2Fapp-release.apk?alt=media&token=0b51580c-b6a0-4749-a71c-e31701cd213f" download
                 className="group flex items-center justify-center p-6 bg-green-50 rounded-xl hover:bg-green-100 transition-all duration-300 transform hover:scale-105"
               >
                 <div className="text-center">
