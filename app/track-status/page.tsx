@@ -161,7 +161,7 @@ export default function TrackStatus() {
                     Call Us
                   </a>
                   <a
-                    href="mailto:support@rameshwarcibil.com"
+                    href="mailto:cibilfixer@gmail.com"
                     className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Email Support

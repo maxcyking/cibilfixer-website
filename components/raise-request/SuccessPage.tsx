@@ -96,12 +96,12 @@ export default function SuccessPage({ customerId }: SuccessPageProps) {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <p className="text-sm text-gray-600">
           Need help? Contact us at{' '}
-          <a href="tel:+919876543210" className="text-blue-600 hover:underline">
-            +91 98765 43210
+          <a href="tel:+919414118156" className="text-blue-600 hover:underline">
+            +91 9414118156
           </a>{' '}
           or{' '}
-          <a href="mailto:support@rameshwarcibil.com" className="text-blue-600 hover:underline">
-            support@rameshwarcibil.com
+          <a href="mailto:cibilfixer@gmail.com" className="text-blue-600 hover:underline">
+            cibilfixer@gmail.com
           </a>
         </p>
       </div>
