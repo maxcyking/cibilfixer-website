@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import StepOne from '@/components/raise-request/StepOne';
@@ -47,7 +47,7 @@ export interface FormData {
   platformMetadata?: PlatformMetadata;
 }
 
-export default function RaiseRequest() {
+function RaiseRequestForm() {
   const searchParams = useSearchParams();
   const [currentStep, setCurrentStep] = useState(1);
   const [customerId, setCustomerId] = useState('');
@@ -227,5 +227,20 @@ export default function RaiseRequest() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function RaiseRequest() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-yellow-50 py-12 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading form...</p>
+        </div>
+      </div>
+    }>
+      <RaiseRequestForm />
+    </Suspense>
   );
 } 
